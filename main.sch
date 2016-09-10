@@ -3802,8 +3802,8 @@ W = angled&lt;p&gt;
 <part name="ESP8266_TO_PROG" library="esp8266modules" deviceset="ESP01" device=""/>
 <part name="S1_RESET" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="S2_PROG" library="switch-omron" deviceset="10-XX" device=""/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="0204/7"/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="0204/7"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="0204/7" value="10k"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="0204/7" value="10k"/>
 <part name="FTDI" library="con-lstb" deviceset="MA06-1" device=""/>
 </parts>
 <sheets>
@@ -3905,12 +3905,13 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="ESP8266_TO_PROG" gate="G$1" pin="GPIO0"/>
 <junction x="43.18" y="53.34"/>
-<pinref part="S2_PROG" gate="1" pin="P"/>
-<junction x="33.02" y="53.34"/>
-<wire x1="43.18" y1="53.34" x2="33.02" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="53.34" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="S2_PROG" gate="1" pin="P1"/>
+<wire x1="33.02" y1="55.88" x2="35.56" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="55.88" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
 <junction x="33.02" y="55.88"/>
-<wire x1="33.02" y1="53.34" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
+<junction x="35.56" y="53.34"/>
+<junction x="35.56" y="55.88"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -3933,11 +3934,8 @@ W = angled&lt;p&gt;
 <wire x1="83.82" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="53.34" x2="83.82" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="S1_RESET" gate="1" pin="S"/>
-<junction x="86.36" y="45.72"/>
 <wire x1="83.82" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="S1_RESET" gate="1" pin="S1"/>
-<wire x1="86.36" y1="45.72" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
-<junction x="86.36" y="48.26"/>
+<junction x="86.36" y="45.72"/>
 </segment>
 </net>
 </nets>
